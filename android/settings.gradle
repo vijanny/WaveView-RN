@@ -1,3 +1,4 @@
 rootProject.name = 'waveView'
 
-include ':app'
+include ':app', ':react-native-waveview-android'
+project(':react-native-waveview-android').projectDir = new File(rootProject.projectDir, './react-native-waveview-android')

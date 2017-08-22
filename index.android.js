@@ -9,45 +9,70 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Dimensions,
+  ToastAndroid,
+  UIManager
 } from 'react-native';
 
-export default class waveView extends Component {
+
+// 数据展示和事件交互
+
+import WaveViewComponent from './WaveViewComponent'
+UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
+class waveView extends Component {
+  constructor(props) {
+    super(props);
+  
+    this.state = {progress:80};
+    var that = this;
+
+  }
+  changeProgress(){
+    
+  }
+
+
+  componentDidMount(){
+    let that = this;
+    setTimeout(()=>{
+      that.setState({progress:30});
+    },3*1000);
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <WaveViewComponent 
+          ref='wave'
+          style={styles.wave} 
+          frontWaveColor="red"
+          behindWaveColor='#FF9E80'
+          borderColor='#FF6E40'
+          borderWidth={20}
+          progress={this.state.progress}
+        />
       </View>
     );
   }
 }
 
+
 const styles = StyleSheet.create({
+  wave:{
+    width:200,
+    height:200,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'white',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  listView: {
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
   },
 });
+
 
 AppRegistry.registerComponent('waveView', () => waveView);
