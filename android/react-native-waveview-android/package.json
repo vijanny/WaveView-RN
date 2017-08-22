@@ -1,6 +1,6 @@
 {
   "name": "react-native-waveview-android",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "WaveView UI Component for react native",
   "main": "WaveViewComponent.js",
   "scripts": {
