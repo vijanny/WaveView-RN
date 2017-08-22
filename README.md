@@ -1,5 +1,8 @@
 # react-native-waveview-android
 WaveView UI Component for react native 
+base on [WaveView for android](https://github.com/gelitenight/WaveView)
+## Screenshot
+![Screenshot](screenshot.gif)
 
 ## Install
 
