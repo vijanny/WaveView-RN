@@ -84,9 +84,7 @@ import {
 } from 'react-native';
 
 import WaveViewComponent from 'react-native-waveview-android'
-          // frontWaveColor="red"
-          // behindWaveColor='#FF9E80'
-          // borderColor='#FF6E40'
+
 
 
 export default class TsWaveView extends Component {
@@ -96,6 +94,9 @@ export default class TsWaveView extends Component {
         <WaveViewComponent 
           ref='wave'
           style={styles.wave} 
+          frontWaveColor="red"
+          behindWaveColor='#FF9E80'
+          borderColor='#FF6E40'          
           borderColor='#FF6E40'
           borderWidth={20}
           progress={30}
