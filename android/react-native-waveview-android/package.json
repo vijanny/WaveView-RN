@@ -1,0 +1,25 @@
+{
+  "name": "react-native-waveview-android",
+  "version": "1.0.3",
+  "description": "WaveView UI Component for react native",
+  "main": "WaveViewComponent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijanny/WaveView-RN.git"
+  },
+  "keywords": [
+    "wave-view",
+    "WaveView",
+    "react-native",
+    "android"
+  ],
+  "author": "vijanny <jiajick@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vijanny/WaveView-RN/issues"
+  },
+  "homepage": "https://github.com/vijanny/WaveView-RN#readme"
+}

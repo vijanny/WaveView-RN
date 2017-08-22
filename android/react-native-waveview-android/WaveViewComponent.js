@@ -5,7 +5,6 @@ import {requireNativeComponent,View,UIManager,findNodeHandle} from 'react-native
 
 
 var WaveView = requireNativeComponent('WaveView', WaveViewComponent);
-// const ReactNative = require('ReactNative');
 const REF_WAVE='ref_wave';
 const PROGRESS_CHANG = 0;
 class WaveViewComponent extends Component {
@@ -14,7 +13,7 @@ class WaveViewComponent extends Component {
      UIManager.dispatchViewManagerCommand(
         findNodeHandle(self.refs[REF_WAVE]),
         UIManager.WaveView.Commands.changeProgress,
-        [this.props.progress]
+        [self.props.progress]
     );
   }
   componentDidMount(){
@@ -23,9 +22,9 @@ class WaveViewComponent extends Component {
         UIManager.dispatchViewManagerCommand(
             findNodeHandle(self.refs[REF_WAVE]),
             UIManager.WaveView.Commands.changeProgress,
-            [this.props.progress]
+            [self.props.progress]
         );
-    },2*1000);
+    },1*1000);
   }
   render() {
     return <WaveView ref={REF_WAVE} {...this.props} />;
